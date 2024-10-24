@@ -1,45 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste de História</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        .question {
-            margin: 20px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .question {
             background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
         .question p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
-
-        .question button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
+        button {
+            background-color: #3498db;
+            color: #fff;
             border: none;
-            border-radius: 4px;
+            padding: 10px 15px;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
-
-        .question button:hover {
-            background-color: #3e8e41;
+        button:hover {
+            background-color: #2980b9;
         }
-
         .resposta {
             display: none;
-            margin-left: 20px;
-            color: #555;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f4f8;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    </body>
+    <h1>Teste de História - Pré-História e Antiguidade</h1>
+
+    <div class="question">
+        <p><strong>1. Quais as diferentes etapas do processo de Hominização e as conquistas do Homem?</strong></p>
+        <button onclick="mostrarResposta(this)">Mostrar Resposta</button>
+        <p id="resposta1" class="resposta">
+            Resposta da questão 1
+        </p>
+    </div>
+
+    <div class="question">
+        <p><strong>2. Outra pergunta...</strong></p>
+        <button onclick="mostrarResposta(this)">Mostrar Resposta</button>
+        <p id="resposta2" class="resposta">
+            Resposta da questão 2
+        </p>
+    </div>
+
+    <script>
+        function mostrarResposta(botao) {
+            var resposta = botao.nextElementSibling;
+            if (resposta.style.display === "none" || resposta.style.display === "") {
+                resposta.style.display = "block";
+                botao.textContent = "Ocultar Resposta";
+            } else {
+                resposta.style.display = "none";
+                botao.textContent = "Mostrar Resposta";
+            }
+        }
+    </script>
+</body>
 </html>
