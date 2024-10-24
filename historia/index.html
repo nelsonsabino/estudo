@@ -31,11 +31,12 @@ margin-bottom: 5px;
 color: #2c3e50;
 }
 .answer {
-margin-left: 20px;
+display: none;
+margin-top: 10px;
 padding: 10px;
 background-color: #f9f9f9;
 border-radius: 5px;
-font-style: italic; /* Respostas em itálico */
+font-style: italic;
 line-height: 1.5;
 }
 ul {
@@ -50,6 +51,22 @@ max-width: 800px;
 margin: 0 auto;
 padding: 0 20px;
 }
+button {
+background-color: #3498db;
+color: #fff;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+margin-top: 10px;
+}
+button:hover {
+background-color: #2980b9;
+}
+.mostrar {
+display: block;
+}
 </style>
 </head>
 <body>
@@ -61,8 +78,8 @@ padding: 0 20px;
 
 <div class="question">
 <strong>1. Quais as diferentes etapas do processo de Hominização e as conquistas do Homem?</strong>
-</div>
-<div class="answer">
+<button onclick="toggleAnswer('answer1')">Mostrar Resposta</button>
+<div id="answer1" class="answer">
 A Hominização é um longo processo evolutivo que levou ao aparecimento do *Homo sapiens*, caracterizado por:
 <ul>
 <li>Australopitecíneos: Desenvolvimento da postura bípede.</li>
@@ -73,11 +90,12 @@ A Hominização é um longo processo evolutivo que levou ao aparecimento do *Hom
 </ul>
 As conquistas do Homem incluem o desenvolvimento de ferramentas, o domínio do fogo, a linguagem, a arte e a cultura.
 </div>
+</div>
 
 <div class="question">
 <strong>2.  Saber identificar os instrumentos e as técnicas utilizadas pelos hominídeos.</strong>
-</div>
-<div class="answer">
+<button onclick="toggleAnswer('answer2')">Mostrar Resposta</button>
+<div id="answer2" class="answer">
 Os instrumentos do Paleolítico eram simples, mas essenciais para a sobrevivência, como:
 <ul>
 <li>Pedras lascadas para cortar, raspar e caçar.</li>
@@ -85,6 +103,7 @@ Os instrumentos do Paleolítico eram simples, mas essenciais para a sobrevivênc
 <li>Fogo para aquecer, cozinhar e defender.</li>
 </ul>
 As técnicas incluíam a caça, a pesca, a coleta de frutos e a fabricação de instrumentos rudimentares.
+</div>
 </div>
 
 <div class="question">
@@ -187,8 +206,8 @@ As técnicas incluíam a caça, a pesca, a coleta de frutos e a fabricação de 
 
 <div class="question">
   <strong>13. Localizar as Civilizações dos Grandes Rios.</strong>
-</div>
-<div class="answer">
+<button onclick="toggleAnswer('answer13')">Mostrar Resposta</button>
+<div id="answer13" class="answer">
   <i>As principais civilizações dos Grandes Rios se desenvolveram ao longo dos seguintes rios:</i>
   <ul>
     <li><i>Mesopotâmia: Tigre e Eufrates.</i></li>
@@ -196,6 +215,7 @@ As técnicas incluíam a caça, a pesca, a coleta de frutos e a fabricação de 
     <li><i>Indus: Indo.</i></li>
     <li><i>China: Amarelo.</i></li>
   </ul>
+</div>
 </div>
 
 <div class="question">
@@ -230,6 +250,17 @@ As técnicas incluíam a caça, a pesca, a coleta de frutos e a fabricação de 
     <li><i><b>Estratificação social:</b> Divisão da sociedade em classes sociais com diferentes níveis de poder e riqueza.</i></li>
   </ul>
 </div>
+
+
+
+<script>
+function toggleAnswer(answerId) {
+var answer = document.getElementById(answerId);
+answer.classList.toggle("mostrar");
+var button = answer.previousElementSibling;
+button.textContent = answer.classList.contains("mostrar") ? "Ocultar Resposta" : "Mostrar Resposta";
+}
+</script>
 
 </body>
 </html>
