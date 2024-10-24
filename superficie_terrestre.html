@@ -2,9 +2,12 @@
 <html>
 <head>
   <title>Perguntas e Respostas sobre Formas de Representação da Superfície Terrestre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     .accordion {
@@ -16,8 +19,9 @@
       border: none;
       text-align: left;
       outline: none;
-      font-size: 15px;
+      font-size: 16px;
       transition: 0.4s;
+      margin-bottom: 15px; /* Aumentado o espaço entre as perguntas */
     }
 
     .active {
@@ -31,33 +35,56 @@
       overflow: hidden;
     }
 
-    /* Estilos do menu */
     header {
-      background-color: #93c6ed;
+      background-color: #000; /* Fundo do menu em preto */
       padding: 10px 0;
-      text-align: center;
     }
 
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      display: flex; /* Flexbox para melhor alinhamento */
+      justify-content: space-around; /* Distribui os itens igualmente */
     }
 
     nav li {
-      display: inline-block;
-      margin: 0 10px;
+      flex-grow: 1; /* Faz com que os itens ocupem a largura disponível */
     }
 
     nav a {
       text-decoration: none;
-      color: #333;
-      padding: 8px 12px;
+      color: #fff; /* Texto em branco para contraste */
+      padding: 10px 15px;
       border-radius: 4px;
+      display: block; /* Para preencher todo o espaço do li */
+      text-align: center; /* Centraliza o texto */
     }
 
     nav a:hover {
-      background-color: #ddd;
+      background-color: #444; /* Cor ao passar o mouse */
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .accordion {
+        font-size: 18px;
+        padding: 20px;
+      }
+
+      nav li {
+        width: auto; /* Remove a largura fixa para itens em telas menores */
+        max-width: none; 
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 15px;
+      }
     }
   </style>
 </head>
@@ -153,28 +180,7 @@
   <p>Informação georreferenciada é um conjunto de dados cuja localização geográfica é dada pelas suas coordenadas, a partir de um sistema de referência.</p>
 </div>
 
-<div class="accordion">
-  <p>Associe os números com os conceitos corretos: 
-    1 - Fotografias aéreas 
-    4 - Ortofotomapas
-    8 - Imagens de satélite
-    2 - Plantas
-    7 - Itinerários
-    5 - Mapas mentais
-    6 - SIG
-    3 - Esboços cartográficos
-  </p>
-</div>
-<div class="panel">
-  <p>A. Sistemas que integram tecnologia informática, pessoas e informação geográfica. - **6 - SIG**
-  B. Trajetos que indicam as distâncias exatas entre lugares, dando informações de ordem prática sobre custos, tempo, entre outras. - **7 - Itinerários**
-  C. Mapas que representam, de forma esquemática e pormenorizada, pequenas áreas. - **2 - Plantas**
-  D. Representações da realidade através de esboços, que resultam da forma como cada um de nós mentalmente visualiza essa realidade. - **5 - Mapas mentais** 
-  E. Elaborados a partir de fotografias aéreas, em que as distorções são corrigidas e onde são incluídas, frequentemente, outras informações, como o nome das localidades, estradas, etc. - **4 - Ortofotomapas**
-  F. Imagens captadas por sensores a bordo de satélites artificiais, que permitem a obtenção de informação importante para a elaboração de mapas de base ou temáticos. - **8 - Imagens de satélite**
-  G. Imagens tiradas normalmente a partir de aeronaves, na vertical ou com vista oblíqua, que podem apresentar elevada distorção nas extremidades. - **1 - Fotografias aéreas** 
-  H. Representações simplificadas, normalmente sem escala, que servem para a obtenção de informações gerais de uma determinada área. - **3 - Esboços cartográficos**</p>
-</div>
+
 
 <script>
   var acc = document.getElementsByClassName("accordion");
