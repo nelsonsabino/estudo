@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perguntas e Respostas sobre Tipos de Mapas</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Perguntas e Respostas sobre Tipos de Mapas</h1>
+
+<div class="accordion">
+  <p>Quais os dois tipos principais de mapas?</p>
+</div>
+<div class="panel">
+  <p>Os dois tipos principais de mapas são: Mapas Gerais (ou de base) e Mapas Temáticos.</p>
+</div>
+
+<div class="accordion">
+  <p>O que são Mapas Gerais (ou de base)?</p>
+</div>
+<div class="panel">
+  <p>Mapas Gerais são o suporte para a elaboração de outros mapas. Eles representam elementos de interesse geral, como a topografia, a hidrografia, as estradas, o povoamento, etc.</p>
+</div>
+
+<div class="accordion">
+  <p>O que são Mapas Temáticos?</p>
+</div>
+<div class="panel">
+  <p>Mapas Temáticos apresentam um tema específico (unitemáticos) ou vários temas (pluritemáticos). Eles representam fenómenos localizáveis de natureza qualitativa ou quantitativa.</p>
+</div>
+
+<div class="accordion">
+  <p>Dê exemplos de Mapas Gerais.</p>
+</div>
+<div class="panel">
+  <p>Exemplos de Mapas Gerais: Mapas topográficos, Mapas corográficos, Mapas hidrográficos, Mapas políticos e Mapas físicos.</p>
+</div>
+
+<div class="accordion">
+  <p>Explique o conceito de Mapas Topográficos.</p>
+</div>
+<div class="panel">
+  <p>Mapas topográficos representam a topografia da superfície terrestre, através de curvas de nível, de uma forma muito pormenorizada, de acordo com a sua escala.</p>
+</div>
+
+<div class="accordion">
+  <p>Explique o conceito de Mapas Corográficos.</p>
+</div>
+<div class="panel">
+  <p>Mapas corográficos representam os traços gerais de uma região ou conjunto de regiões, de um país ou de vários. Apresentam maior generalização que os mapas topográficos.</p>
+</div>
+
+<div class="accordion">
+  <p>Explique o conceito de Mapas Hidrográficos.</p>
+</div>
+<div class="panel">
+  <p>Mapas hidrográficos representam os oceanos, lagos e rios, incluindo as áreas adjacentes.</p>
+</div>
+
+<div class="accordion">
+  <p>Dê exemplos de Mapas Temáticos.</p>
+</div>
+<div class="panel">
+  <p>Exemplos de Mapas Temáticos: Mapas humanos (com foco em elementos humanos, como vias de comunicação, demografia, economia), Mapas físicos (com foco em elementos naturais, como rede hidrográfica, clima, relevo).</p>
+</div>
+
+<div class="accordion">
+  <p>O que é um Planisfério?</p>
+</div>
+<div class="panel">
+  <p>Um Planisfério representa a totalidade do planeta, com pouco pormenor, numa única superfície contínua.</p>
+</div>
+
+<div class="accordion">
+  <p>O que é um Mapa hipsométrico?</p>
+</div>
+<div class="panel">
+  <p>Um Mapa hipsométrico representa o relevo por andares de altitude.</p>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
