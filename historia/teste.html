@@ -2,24 +2,43 @@
 <html>
 <head>
     <title>Teste de História</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .resposta {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <h1>Teste de História - Pré-História e Antiguidade</h1>
 
     <div class="question">
         <p><strong>1. Quais as diferentes etapas do processo de Hominização e as conquistas do Homem?</strong></p>
-        <a href="#resposta1">Mostrar Resposta</a>
+        <button onclick="mostrarResposta(this)">Mostrar Resposta</button>
         <p id="resposta1" class="resposta">
-            </p>
+            Resposta da questão 1
+        </p>
     </div>
 
     <div class="question">
         <p><strong>2. Outra pergunta...</strong></p>
-        <a href="#resposta2">Mostrar Resposta</a>
+        <button onclick="mostrarResposta(this)">Mostrar Resposta</button>
         <p id="resposta2" class="resposta">
-            </p>
+            Resposta da questão 2
+        </p>
     </div>
 
-    </body>
+    <script>
+        function mostrarResposta(botao) {
+            // Obtém o elemento da resposta correspondente ao botão clicado
+            var resposta = botao.parentNode.querySelector(".resposta");
+
+            // Alterna o estilo para mostrar ou ocultar a resposta
+            if (resposta.style.display === "none") {
+                resposta.style.display = "block";
+            } else {
+                resposta.style.display = "none";
+            }
+        }
+    </script>
+</body>
 </html>
