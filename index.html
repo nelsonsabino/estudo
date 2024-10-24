@@ -40,17 +40,19 @@
     nav {
       background-color: #f0f0f0;
       padding: 20px;
-      width: 200px;
+      width: 100%; /* Ocupa toda a largura da tela */
       position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
+      z-index: 10; /* Garante que o menu fica por cima do conteúdo */
     }
 
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      display: flex; /* Flexbox para organizar os itens do menu */
+      justify-content: space-around; /* Distribui os itens igualmente */
     }
 
     nav li {
@@ -70,6 +72,32 @@
     nav a:hover {
       background-color: #ddd;
     }
+
+    /* Estilos para o conteúdo da página */
+    main {
+      padding: 20px;
+      margin-top: 60px; /* Espaço para o menu */
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      /* Estilos para telas menores que 768px */
+      nav ul {
+        flex-direction: column; /* Empilha os itens do menu */
+        align-items: center; /* Centraliza os itens do menu */
+      }
+
+      nav li {
+        width: 100%; /* Cada item ocupa toda a largura da tela */
+      }
+
+      main {
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -86,8 +114,7 @@
 <main>
   <h1>Preparação para o teste de geografia</h1>
 
-
-</main>
+  </main>
 
 </body>
 </html>
