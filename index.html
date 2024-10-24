@@ -45,18 +45,22 @@
       top: 0;
       left: 0;
       z-index: 10; /* Garante que o menu fica por cima do conteúdo */
+      height: 100vh; /* Ocupa toda a altura da tela */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      display: flex; /* Flexbox para organizar os itens do menu */
-      justify-content: space-around; /* Distribui os itens igualmente */
+      width: 100%;
     }
 
     nav li {
       margin-bottom: 10px;
+      width: 100%;
     }
 
     nav a {
@@ -67,6 +71,9 @@
       background-color: #fff;
       border-radius: 4px;
       transition: background-color 0.3s;
+      width: 100%;
+      text-align: center;
+      font-size: 1.2em;
     }
 
     nav a:hover {
