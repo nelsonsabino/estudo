@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perguntas e Respostas sobre Mapas</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Perguntas e Respostas sobre Mapas</h1>
+
+<div class="accordion">
+  <p>Menciona situações exemplificativas em que haja recurso a globos ou a mapas.</p>
+</div>
+<div class="panel">
+  <p>As situações podem variar desde a navegação marítima e aérea, a planeamento de viagens, a localização de países e cidades, a estudo de fenómenos geográficos, a apresentação de dados geográficos, entre outras.</p>
+</div>
+
+<div class="accordion">
+  <p>Formas de representação da superfície terrestre</p>
+</div>
+<div class="panel">
+  <p>As formas de representação da superfície terrestre são globos terrestres e mapas.</p>
+</div>
+
+<div class="accordion">
+  <p>Globos terrestres: Vantagens</p>
+</div>
+<div class="panel">
+  <p>• representação mais fiel da superfície terrestre, uma vez que representam a Terra com o mínimo de distorção
+    • fácil leitura, pois representam toda a superfície terrestre, ou apenas parte da mesma, tal como um continente ou um país
+    • fácil transporte
+    • fácil arrumação</p>
+</div>
+
+<div class="accordion">
+  <p>Globos terrestres: Desvantagens</p>
+</div>
+<div class="panel">
+  <p>• difícil leitura, dado que: 
+     - não permitem visualizar ao mesmo tempo toda a Terra
+     - a superfície terrestre apresenta-se muito reduzida
+    • difícil transporte
+    • difícil arrumação</p>
+</div>
+
+<div class="accordion">
+  <p>Mapas: Vantagens</p>
+</div>
+<div class="panel">
+  <p>• fácil leitura, pois representam toda a superfície terrestre, ou apenas parte da mesma, tal como um continente ou um país
+    • fácil transporte
+    • fácil arrumação</p>
+</div>
+
+<div class="accordion">
+  <p>Mapas: Desvantagens</p>
+</div>
+<div class="panel">
+  <p>• possuem sempre erros ou deformações, por serem representações planas da superfície terrestre</p>
+</div>
+
+<div class="accordion">
+  <p>O que é uma projeção cartográfica?</p>
+</div>
+<div class="panel">
+  <p>Projeção cartográfica: conjunto de técnicas que permitem passar a informação de um globo, que é esférico, para um mapa, que é plano.</p>
+</div>
+
+<div class="accordion">
+  <p>Quais os tipos de projeções cartográficas?</p>
+</div>
+<div class="panel">
+  <p>Os principais tipos de projeções cartográficas são: Projeção cilíndrica, Projeção cónica e Projeção azimutal (plana ou planar)</p>
+</div>
+
+<div class="accordion">
+  <p>Projeção cilíndrica: Vantagens e Desvantagens</p>
+</div>
+<div class="panel">
+  <p>Vantagens: Ideal para representar regiões equatoriais. 
+    Desvantagens: As regiões polares são as mais deformadas, pois apresentam uma dimensão exagerada.</p>
+</div>
+
+<div class="accordion">
+  <p>Projeção cónica: Vantagens e Desvantagens</p>
+</div>
+<div class="panel">
+  <p>Vantagens: Menor distorção nas regiões de latitudes médias. 
+    Desvantagens: As regiões mais deformadas são a região equatorial e as regiões polares.</p>
+</div>
+
+<div class="accordion">
+  <p>Projeção azimutal (plana ou planar): Vantagens e Desvantagens</p>
+</div>
+<div class="panel">
+  <p>Vantagens: As regiões menos deformadas são as polares.
+    Desvantagens: A região equatorial é a mais deformada.</p>
+</div>
+
+<div class="accordion">
+  <p>Completa o texto: Na projeção __________ a superfície de projeção é um cilindro, normalmente tangente ao __________. Os meridianos e os paralelos são retilíneos e perpendiculares entre si. Num outro sistema a superfície de projeção é um _______, designando-se de projeção __________, dado que é tangente a um dos polos. Os meridianos são retilíneos e partem do centro, enquanto que os paralelos são circulares e concêntricos. As distorções aumentam a partir do ponto ________  para o exterior. Por fim, na projeção __________  a superfície de projeção é um __________, normalmente tangente a um __________. Os paralelos são circulares e concêntricos e os meridianos são retilíneos, surgindo de um único ________.</p>
+</div>
+<div class="panel">
+  <p>Na projeção **cilíndrica** a superfície de projeção é um cilindro, normalmente tangente ao **Equador**. Os meridianos e os paralelos são retilíneos e perpendiculares entre si. 
+  Num outro sistema a superfície de projeção é um **plano**, designando-se de projeção **azimutal**, dado que é tangente a um dos polos. Os meridianos são retilíneos e partem do centro, enquanto que os paralelos são circulares e concêntricos. As distorções aumentam a partir do ponto **central** para o exterior. 
+  Por fim, na projeção **cónica**  a superfície de projeção é um **cone**, normalmente tangente a um **paralelo**. Os paralelos são circulares e concêntricos e os meridianos são retilíneos, surgindo de um único **ponto**.</p>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
