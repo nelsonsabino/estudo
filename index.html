@@ -11,13 +11,15 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      background-color: black; /* Fundo preto */
+      color: white; /* Texto branco para melhor contraste */
     }
 
     h1 {
       text-align: center;
       padding: 20px;
       margin: 0;
-      background-color: #f8f8f8;
+      background-color: #333; /* Fundo do título em cinza escuro */
       position: fixed;
       top: 0;
       left: 0;
@@ -26,7 +28,7 @@
     }
 
     nav {
-      background-color: #f0f0f0;
+      background-color: #444; /* Fundo do menu em cinza escuro */
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -49,10 +51,10 @@
 
     nav a {
       text-decoration: none;
-      color: #333;
+      color: white; /* Texto dos links em branco */
       display: block;
       padding: 15px;
-      background-color: #fff;
+      background-color: #555; /* Fundo dos links em cinza médio */
       border-radius: 4px;
       transition: background-color 0.3s;
       width: 100%;
@@ -62,7 +64,7 @@
     }
 
     nav a:hover {
-      background-color: #ddd;
+      background-color: #777; /* Cor ao passar o mouse em cinza claro */
     }
 
     @media (max-width: 768px) {
