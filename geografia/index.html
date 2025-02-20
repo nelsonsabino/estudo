@@ -6,155 +6,330 @@
     <title>Teste de Geografia - 7º Ano</title>
 </head>
 <body>
-    <h1>Teste nº 1 de Geografia | 7º Ano</h1>
-    
-    <form id="quizForm">
-        <!-- GRUPO A -->
-        <h2>Grupo A | União Europeia</h2>
-        <p>Observa o mapa político da Europa da figura 1 (não incluído).</p>
+    <div class="container">
+        <h1>Teste nº 1 de Geografia | 7º Ano - Versão B</h1>
         
-        <p><strong>1. Indica o número correspondente na figura 1:</strong></p>
-        <table>
-            <tr><th>Países da União Europeia</th><th>Nº na Figura 1</th></tr>
-            <tr><td>França</td><td><input type="number" name="a1_franca"></td></tr>
-            <tr><td>Finlândia</td><td><input type="number" name="a1_finlandia"></td></tr>
-            <tr><td>Miranda</td><td><input type="number" name="a1_miranda"></td></tr>
-            <tr><td>Alemanha</td><td><input type="number" name="a1_alemanha"></td></tr>
-            <tr><td>Grécia</td><td><input type="number" name="a1_grecia"></td></tr>
-            <tr><td>Itália</td><td><input type="number" name="a1_italia"></td></tr>
-        </table>
+        <form id="quizForm">
+            <!-- GRUPO A -->
+            <div class="group">
+                <h2>Grupo A | União Europeia</h2>
+                <p><em>Observa o mapa político da Europa da Figura 1.</em></p>
+                <img src="figura1.jpg" alt="Mapa Político da Europa" class="figure">
+                
+                <div class="question">
+                    <p><strong>1. Indica o número correspondente na Figura 1 para cada país:</strong></p>
+                    <table>
+                        <tr><th>Países da União Europeia</th><th>Nº na Figura 1</th></tr>
+                        <tr><td>França</td><td><input type="number" name="a1_franca" class="small-input"></td></tr>
+                        <tr><td>Finlândia</td><td><input type="number" name="a1_finlandia" class="small-input"></td></tr>
+                        <tr><td>Hungria</td><td><input type="number" name="a1_hungria" class="small-input"></td></tr>
+                        <tr><td>Alemanha</td><td><input type="number" name="a1_alemanha" class="small-input"></td></tr>
+                        <tr><td>Grécia</td><td><input type="number" name="a1_grecia" class="small-input"></td></tr>
+                        <tr><td>Itália</td><td><input type="number" name="a1_italia" class="small-input"></td></tr>
+                    </table>
+                </div>
 
-        <p><strong>2. Refere as capitais dos países associados aos números:</strong></p>
-        <label>1: <input type="text" name="a2_1"></label><br>
-        <label>8: <input type="text" name="a2_8"></label><br>
-        <label>11: <input type="text" name="a2_11"></label><br>
+                <div class="question">
+                    <p><strong>2. Identifica as capitais dos países associados a estes números:</strong></p>
+                    <label>1: <input type="text" name="a2_1" class="text-input"></label>
+                    <label>8: <input type="text" name="a2_8" class="text-input"></label>
+                    <label>11: <input type="text" name="a2_11" class="text-input"></label>
+                </div>
 
-        <p><strong>3. Seleciona a opção correta:</strong></p>
-        <p>3.1. Os países que fundaram a C.E.C.A. e a C.E.E. foram:</p>
-        <label><input type="radio" name="a3_1" value="A"> (A) Miranda e Croácia</label><br>
-        <label><input type="radio" name="a3_1" value="B"> (B) Itália e Alemanha</label><br>
-        
-        <p>3.2. As capitais dos países que integraram a UE em 1986 são:</p>
-        <label><input type="radio" name="a3_2" value="A"> (A) Lisboa e Riga</label><br>
-        <label><input type="radio" name="a3_2" value="B"> (B) Lisboa e Madrid</label><br>
-        
-        <p>3.3. O maior alargamento da UE foi em:</p>
-        <label><input type="radio" name="a3_3" value="A"> (A) 2001, onze novos Estados</label><br>
-        <label><input type="radio" name="a3_3" value="B"> (B) 2004, dez novos Estados</label><br>
-        
-        <p>3.4. Capitais de Estónia, Letónia e Lituânia:</p>
-        <label><input type="radio" name="a3_4" value="A"> (A) Tallinn, Riga e Vilnius</label><br>
-        <label><input type="radio" name="a3_4" value="B"> (B) Riga, Vilnius e Paris</label><br>
-        
-        <p>3.5. Três países que aderiram em 2004:</p>
-        <label><input type="radio" name="a3_5" value="A"> (A) Portugal, Polónia e Malta</label><br>
-        <label><input type="radio" name="a3_5" value="B"> (B) Eslováquia, Letónia e Polónia</label><br>
-        
-        <p>3.6. Direito de um cidadão da UE:</p>
-        <label><input type="radio" name="a3_6" value="A"> (A) Circular por 3 meses</label><br>
-        <label><input type="radio" name="a3_6" value="B"> (B) Estudar e trabalhar ilimitadamente</label><br>
-        
-        <p>3.7. Objetivo principal da UE:</p>
-        <label><input type="radio" name="a3_7" value="A"> (A) Paz, prosperidade e liberdade</label><br>
-        <label><input type="radio" name="a3_7" value="B"> (B) Património cultural</label><br>
+                <div class="question">
+                    <p><strong>3. Seleciona a opção correta:</strong></p>
+                    <div class="sub-question">
+                        <p>3.1. Os países que fundaram a C.E.C.A. e a C.E.E. incluem:</p>
+                        <label><input type="radio" name="a3_1" value="A"> (A) Miranda e Croácia</label>
+                        <label><input type="radio" name="a3_1" value="B"> (B) Itália e Alemanha</label>
+                    </div>
+                    <div class="sub-question">
+                        <p>3.2. Capitais dos países que aderiram à UE em 1986:</p>
+                        <label><input type="radio" name="a3_2" value="A"> (A) Lisboa e Riga</label>
+                        <label><input type="radio" name="a3_2" value="B"> (B) Lisboa e Madrid</label>
+                    </div>
+                    <div class="sub-question">
+                        <p>3.3. O maior alargamento da UE ocorreu em:</p>
+                        <label><input type="radio" name="a3_3" value="A"> (A) 2001, com 11 novos membros</label>
+                        <label><input type="radio" name="a3_3" value="B"> (B) 2004, com 10 novos membros</label>
+                    </div>
+                    <div class="sub-question">
+                        <p>3.4. Capitais da Estónia, Letónia e Lituânia:</p>
+                        <label><input type="radio" name="a3_4" value="A"> (A) Tallinn, Riga e Vilnius</label>
+                        <label><input type="radio" name="a3_4" value="B"> (B) Riga, Vilnius e Paris</label>
+                    </div>
+                    <div class="sub-question">
+                        <p>3.5. Três países que aderiram em 2004:</p>
+                        <label><input type="radio" name="a3_5" value="A"> (A) Portugal, Polónia e Malta</label>
+                        <label><input type="radio" name="a3_5" value="B"> (B) Eslováquia, Letónia e Polónia</label>
+                    </div>
+                    <div class="sub-question">
+                        <p>3.6. Direito de um cidadão da UE:</p>
+                        <label><input type="radio" name="a3_6" value="A"> (A) Circular por até 3 meses</label>
+                        <label><input type="radio" name="a3_6" value="B"> (B) Estudar e trabalhar sem limite</label>
+                    </div>
+                    <div class="sub-question">
+                        <p>3.7. Objetivo principal da UE:</p>
+                        <label><input type="radio" name="a3_7" value="A"> (A) Paz, prosperidade e liberdade</label>
+                        <label><input type="radio" name="a3_7" value="B"> (B) Património cultural</label>
+                    </div>
+                </div>
 
-        <p><strong>4. Vantagens da moeda única:</strong></p>
-        <label>Vantagem 1: <input type="text" name="a4_1"></label><br>
-        <label>Vantagem 2: <input type="text" name="a4_2"></label><br>
+                <div class="question">
+                    <p><strong>4. Indica duas vantagens da moeda única (euro):</strong></p>
+                    <label>Vantagem 1: <input type="text" name="a4_1" class="text-input"></label>
+                    <label>Vantagem 2: <input type="text" name="a4_2" class="text-input"></label>
+                </div>
+            </div>
 
-        <!-- GRUPO B -->
-        <h2>Grupo B | Portugal</h2>
-        <p><strong>1. Identifica as afirmações (Figura 2 não incluída):</strong></p>
-        <label><input type="radio" name="b1" value="A"> (A) I verdadeira, II falsa</label><br>
-        <label><input type="radio" name="b1" value="B"> (B) II verdadeira, I falsa</label><br>
+            <!-- GRUPO B -->
+            <div class="group">
+                <h2>Grupo B | Portugal</h2>
+                <p><em>Observa as Figuras 2, 3 e 4.</em></p>
+                <img src="figura2.jpg" alt="Território Português" class="figure">
+                <img src="figura3.jpg" alt="NUTS II Portugal" class="figure">
+                <img src="figura4.jpg" alt="NUTS III Portugal" class="figure">
 
-        <p><strong>2. Completa a frase (Figura 3 não incluída):</strong></p>
-        <p>A NUTS I é constituída por:</p>
-        <label><input type="radio" name="b2_a" value="1"> (1) 18 distritos e 2 regiões autónomas</label><br>
-        <label><input type="radio" name="b2_a" value="3"> (3) 3 unidades territoriais</label><br>
-        <p>A figura 3 representa as:</p>
-        <label><input type="radio" name="b2_b" value="2"> (2) NUTS II</label><br>
-        <label><input type="radio" name="b2_b" value="4"> (4) NUTS III</label><br>
+                <div class="question">
+                    <p><strong>1. Sobre a divisão administrativa de Portugal:</strong></p>
+                    <label><input type="radio" name="b1" value="A"> (A) Inclui 18 distritos e 2 regiões autónomas</label>
+                    <label><input type="radio" name="b1" value="B"> (B) É composta apenas por 3 unidades territoriais</label>
+                </div>
 
-        <!-- GRUPO C -->
-        <h2>Grupo C | Formas de Representação</h2>
-        <p><strong>1. Corresponde (Figura 5 não incluída):</strong></p>
-        <label>a) Mapa: <input type="number" name="c1_a" maxlength="1"></label><br>
-        <label>b) Globo terrestre: <input type="number" name="c1_b" maxlength="1"></label><br>
+                <div class="question">
+                    <p><strong>2. Sobre as NUTS em Portugal:</strong></p>
+                    <div class="sub-question">
+                        <p>A NUTS I é formada por:</p>
+                        <label><input type="radio" name="b2_a" value="1"> (1) 18 distritos e 2 regiões autónomas</label>
+                        <label><input type="radio" name="b2_a" value="3"> (3) 3 unidades territoriais</label>
+                    </div>
+                    <div class="sub-question">
+                        <p>A Figura 3 representa:</p>
+                        <label><input type="radio" name="b2_b" value="2"> (2) NUTS II</label>
+                        <label><input type="radio" name="b2_b" value="4"> (4) NUTS III</label>
+                    </div>
+                </div>
+            </div>
 
-        <p><strong>2. Associa (Figura 6 não incluída):</strong></p>
-        <label>1. Imagem A: <select name="c2_1"><option value="a">a) Ortofotomapa</option><option value="b">b) Foto aérea</option><option value="c">c) Imagem de satélite</option></select></label><br>
-        <label>2. Imagem B: <select name="c2_2"><option value="a">a) Ortofotomapa</option><option value="b">b) Foto aérea</option><option value="c">c) Imagem de satélite</option></select></label><br>
-        <label>3. Imagem C: <select name="c2_3"><option value="a">a) Ortofotomapa</option><option value="b">b) Foto aérea</option><option value="c">c) Imagem de satélite</option></select></label><br>
+            <!-- GRUPO C -->
+            <div class="group">
+                <h2>Grupo C | Formas de Representação</h2>
+                <p><em>Observa as Figuras 5, 6, 7 e 8.</em></p>
+                <img src="figura5.jpg" alt="Formas de Representação" class="figure">
+                <img src="figura6.jpg" alt="Imagens A, B, C" class="figure">
+                <img src="figura7.jpg" alt="Projeção Cartográfica" class="figure">
+                <img src="figura8.jpg" alt="Densidade Populacional Ásia" class="figure">
 
-        <p><strong>3. Projeção cartográfica (Figura 7 não incluída):</strong></p>
-        <label><input type="radio" name="c3" value="A"> (A) Plana para esférica, sem distorções</label><br>
-        <label><input type="radio" name="c3" value="B"> (B) Esférica para plana, com distorções</label><br>
+                <div class="question">
+                    <p><strong>1. Associa cada forma às suas características:</strong></p>
+                    <label>a) Mapa: <input type="number" name="c1_a" class="small-input" maxlength="1"></label>
+                    <label>b) Globo terrestre: <input type="number" name="c1_b" class="small-input" maxlength="1"></label>
+                    <p>1. Difícil transporte e arrumação.</p>
+                    <p>2. Representação plana com distorções.</p>
+                </div>
 
-        <p><strong>4. Tipo de projeção (Figura 7):</strong></p>
-        <label><input type="text" name="c4"></label><br>
+                <div class="question">
+                    <p><strong>2. Identifica as imagens da Figura 6:</strong></p>
+                    <label>Imagem A: <select name="c2_1">
+                        <option value="a">a) Ortofotomapa</option>
+                        <option value="b">b) Foto aérea</option>
+                        <option value="c">c) Imagem de satélite</option>
+                    </select></label>
+                    <label>Imagem B: <select name="c2_2">
+                        <option value="a">a) Ortofotomapa</option>
+                        <option value="b">b) Foto aérea</option>
+                        <option value="c">c) Imagem de satélite</option>
+                    </select></label>
+                    <label>Imagem C: <select name="c2_3">
+                        <option value="a">a) Ortofotomapa</option>
+                        <option value="b">b) Foto aérea</option>
+                        <option value="c">c) Imagem de satélite</option>
+                    </select></label>
+                </div>
 
-        <p><strong>5. Correspondência de mapas:</strong></p>
-        <label>a: <select name="c5_a"><option value="Estradas">Estradas</option><option value="Político">Político</option><option value="Planta">Planta</option><option value="Planisfério">Planisfério</option></select></label><br>
-        <label>b: <select name="c5_b"><option value="Estradas">Estradas</option><option value="Político">Político</option><option value="Planta">Planta</option><option value="Planisfério">Planisfério</option></select></label><br>
-        <label>c: <select name="c5_c"><option value="Estradas">Estradas</option><option value="Político">Político</option><option value="Planta">Planta</option><option value="Planisfério">Planisfério</option></select></label><br>
-        <label>d: <select name="c5_d"><option value="Estradas">Estradas</option><option value="Político">Político</option><option value="Planta">Planta</option><option value="Planisfério">Planisfério</option></select></label><br>
+                <div class="question">
+                    <p><strong>3. Sobre projeções cartográficas:</strong></p>
+                    <label><input type="radio" name="c3" value="A"> (A) Plana para esférica, sem distorções</label>
+                    <label><input type="radio" name="c3" value="B"> (B) Esférica para plana, com distorções</label>
+                </div>
 
-        <p><strong>6. Elementos ausentes (Figura 8 não incluída):</strong></p>
-        <label>Elemento 1: <input type="text" name="c6_1"></label><br>
-        <label>Elemento 2: <input type="text" name="c6_2"></label><br>
+                <div class="question">
+                    <p><strong>4. Tipo de projeção da Figura 7:</strong></p>
+                    <label><input type="text" name="c4" class="text-input"></label>
+                </div>
 
-        <button type="submit">Submeter</button>
-    </form>
+                <div class="question">
+                    <p><strong>5. Associa cada descrição ao tipo de mapa:</strong></p>
+                    <label>a) Toda a superfície terrestre num plano: <select name="c5_a">
+                        <option value="Estradas">Estradas</option>
+                        <option value="Político">Político</option>
+                        <option value="Planta">Planta</option>
+                        <option value="Planisfério">Planisfério</option>
+                    </select></label>
+                    <label>b) Vias de comunicação para viajantes: <select name="c5_b">
+                        <option value="Estradas">Estradas</option>
+                        <option value="Político">Político</option>
+                        <option value="Planta">Planta</option>
+                        <option value="Planisfério">Planisfério</option>
+                    </select></label>
+                    <label>c) Países ou regiões administrativas: <select name="c5_c">
+                        <option value="Estradas">Estradas</option>
+                        <option value="Político">Político</option>
+                        <option value="Planta">Planta</option>
+                        <option value="Planisfério">Planisfério</option>
+                    </select></label>
+                    <label>d) Detalhes como casas e árvores: <select name="c5_d">
+                        <option value="Estradas">Estradas</option>
+                        <option value="Político">Político</option>
+                        <option value="Planta">Planta</option>
+                        <option value="Planisfério">Planisfério</option>
+                    </select></label>
+                </div>
 
-    <div id="results">
-        <h2>Resultados</h2>
-        <p id="score"></p>
-        <div id="corrections"></div>
+                <div class="question">
+                    <p><strong>6. Elementos ausentes na Figura 8:</strong></p>
+                    <label>1: <input type="text" name="c6_1" class="text-input"></label>
+                    <label>2: <input type="text" name="c6_2" class="text-input"></label>
+                </div>
+
+                <div class="question">
+                    <p><strong>7. Sobre escalas em mapas:</strong></p>
+                    <label><input type="radio" name="c7" value="A"> (A) Escala grande mostra mais detalhes</label>
+                    <label><input type="radio" name="c7" value="B"> (B) Escala pequena mostra mais detalhes</label>
+                </div>
+            </div>
+
+            <button type="submit">Submeter Respostas</button>
+        </form>
+
+        <div id="results">
+            <h2>Resultados</h2>
+            <p id="score"></p>
+            <div id="corrections"></div>
+        </div>
     </div>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
             padding: 20px;
         }
-        h1, h2 {
-            color: #333;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        label, p {
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .group {
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        }
+        .question {
+            margin: 15px 0;
+        }
+        .sub-question {
+            margin: 10px 0;
+        }
+        p {
             margin: 5px 0;
+            color: #34495e;
+        }
+        em {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .figure {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
         table {
+            width: 60%;
             border-collapse: collapse;
-            width: 50%;
             margin: 10px 0;
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 10px;
             text-align: left;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #3498db;
+            color: white;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+            color: #2c3e50;
+        }
+        input[type="number"].small-input {
+            width: 50px;
+            padding: 5px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+        input[type="text"].text-input {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+        select {
+            padding: 8px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            width: 200px;
         }
         button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px;
+            background-color: #27ae60;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
         }
         button:hover {
-            background-color: #45a049;
+            background-color: #219653;
         }
         #results {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fefefe;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             display: none;
+        }
+        #results h2 {
+            color: #e74c3c;
+            border-bottom: none;
+        }
+        #corrections p {
+            margin: 5px 0;
+            color: #7f8c8d;
         }
     </style>
 
@@ -163,15 +338,15 @@
             e.preventDefault();
 
             const correctAnswers = {
-                a1_franca: "1",           // Ajuste conforme o mapa
-                a1_finlandia: "2",        // Ajuste conforme o mapa
-                a1_miranda: "N/A",        // Miranda não é um país da UE
-                a1_alemanha: "3",         // Ajuste conforme o mapa
-                a1_grecia: "4",           // Ajuste conforme o mapa
-                a1_italia: "5",           // Ajuste conforme o mapa
-                a2_1: "Paris",            // França
-                a2_8: "Helsínquia",       // Finlândia (ajuste número)
-                a2_11: "Atenas",          // Grécia (ajuste número)
+                a1_franca: "1",      // Exemplo, ajuste conforme mapa
+                a1_finlandia: "2",
+                a1_hungria: "3",
+                a1_alemanha: "4",
+                a1_grecia: "5",
+                a1_italia: "6",
+                a2_1: "Paris",
+                a2_8: "Helsínquia",
+                a2_11: "Atenas",
                 a3_1: "B",
                 a3_2: "B",
                 a3_3: "B",
@@ -179,24 +354,25 @@
                 a3_5: "B",
                 a3_6: "B",
                 a3_7: "A",
-                a4_1: "Facilitar trocas comerciais",  // Exemplo, aceita variações
-                a4_2: "Estabilizar economia",         // Exemplo, aceita variações
+                a4_1: "Facilitar trocas comerciais",  // Exemplo
+                a4_2: "Estabilizar economia",         // Exemplo
                 b1: "A",
                 b2_a: "1",
                 b2_b: "2",
                 c1_a: "2",
                 c1_b: "1",
                 c2_1: "a",  // Exemplo, ajuste conforme imagens
-                c2_2: "b",  // Exemplo
-                c2_3: "c",  // Exemplo
+                c2_2: "b",
+                c2_3: "c",
                 c3: "B",
                 c4: "Cónica",
                 c5_a: "Planisfério",
                 c5_b: "Estradas",
                 c5_c: "Político",
                 c5_d: "Planta",
-                c6_1: "Legenda",  // Exemplo comum
-                c6_2: "Escala"    // Exemplo comum
+                c6_1: "Legenda",  // Exemplo
+                c6_2: "Escala",   // Exemplo
+                c7: "A"
             };
 
             let score = 0;
@@ -209,7 +385,7 @@
                 if (userAnswer && userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
                     score++;
                 } else {
-                    corrections += `<p>${key}: Correto: "${correctAnswer}", Sua resposta: "${userAnswer || 'Nenhuma resposta'}"</p>`;
+                    corrections += `<p>${key}: Correto: "${correctAnswer}", Sua resposta: "${userAnswer || 'Nenhuma'}"</p>`;
                 }
             }
 
