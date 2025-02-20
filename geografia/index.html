@@ -127,12 +127,20 @@
             margin: 5px 0;
             color: #7f8c8d;
         }
-        .correct {
-            color: green;
+        .feedback {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 4px;
         }
-
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
         .incorrect {
-            color: red;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
         }
     </style>
 </head>
@@ -147,7 +155,7 @@
                 <p><em>Observa o mapa político da Europa da Figura 1.</em></p>
                 <img src="figura1.jpg" alt="Mapa Político da Europa" class="figure">
 
-                <div class="question">
+                <div class="question" id="question_a1">
                     <p><strong>1. Indica o número correspondente na Figura 1 para cada país:</strong></p>
                     <table>
                         <tr><th>Países da União Europeia</th><th>Nº na Figura 1</th></tr>
@@ -160,14 +168,14 @@
                     </table>
                 </div>
 
-                <div class="question">
+                <div class="question"  id="question_a2">
                     <p><strong>2. Refere as capitais dos países associados aos seguintes números da Figura 1:</strong></p>
-                    <label for="a2_1">1: <input type="text" id="a2_1" name="a2_1" class="text-input"></label>
-                    <label for="a2_8">8: <input type="text" id="a2_8" name="a2_8" class="text-input"></label>
-                    <label for="a2_11">11: <input type="text" id="a2_11" name="a2_11" class="text-input"></label>
+                    <label>1: <input type="text" name="a2_1" class="text-input"></label>
+                    <label>8: <input type="text" name="a2_8" class="text-input"></label>
+                    <label>11: <input type="text" name="a2_11" class="text-input"></label>
                 </div>
 
-                <div class="question">
+                <div class="question"  id="question_a3">
                     <p><strong>3. Seleciona a opção correta:</strong></p>
                     <div class="sub-question">
                         <p>3.1. Os países que fundaram a C.E.C.A. em 1951 e a C.E.E. em 1957 foram: Bélgica, Países Baixos, Luxemburgo, França...</p>
@@ -206,10 +214,10 @@
                     </div>
                 </div>
 
-                <div class="question">
+                <div class="question"  id="question_a4">
                     <p><strong>4. Indica duas vantagens da moeda única (euro):</strong></p>
-                    <label for="a4_1">Vantagem 1: <input type="text" id = "a4_1" name="a4_1" class="text-input"></label>
-                    <label for="a4_2">Vantagem 2: <input type="text" id = "a4_2" name="a4_2" class="text-input"></label>
+                    <label>Vantagem 1: <input type="text" name="a4_1" class="text-input"></label>
+                    <label>Vantagem 2: <input type="text" name="a4_2" class="text-input"></label>
                 </div>
             </div>
 
@@ -219,29 +227,29 @@
                 <p><em>Observa a Figura 2 - Território Português.</em></p>
                 <img src="figura2.jpg" alt="Território Português" class="figure">
 
-                <div class="question">
+                <div class="question"  id="question_b1">
                     <p><strong>1. Identifica os distritos ou cidades no mapa continental da Figura 2:</strong></p>
-                    <label for="b1_1">Ponto 1: <input type="text" id = "b1_1" name="b1_1" class="text-input"></label>
-                    <label for="b1_2">Ponto 2: <input type="text" id = "b1_2" name="b1_2" class="text-input"></label>
-                    <label for="b1_3">Ponto 3: <input type="text" id = "b1_3" name="b1_3" class="text-input"></label>
-                    <label for="b1_4">Ponto 4: <input type="text" id = "b1_4" name="b1_4" class="text-input"></label>
+                    <label>Ponto 1: <input type="text" name="b1_1" class="text-input"></label>
+                    <label>Ponto 2: <input type="text" name="b1_2" class="text-input"></label>
+                    <label>Ponto 3: <input type="text" name="b1_3" class="text-input"></label>
+                    <label>Ponto 4: <input type="text" name="b1_4" class="text-input"></label>
                 </div>
 
-                <div class="question">
+                <div class="question"  id="question_b2">
                     <p><strong>2. Identifica as ilhas nas regiões autónomas da Figura 2:</strong></p>
                     <div class="sub-question">
                         <p>Açores (Mapa B):</p>
-                        <label for="b2_i">Ponto I: <input type="text" id = "b2_i" name="b2_i" class="text-input"></label>
-                        <label for="b2_ii">Ponto II: <input type="text" id = "b2_ii" name="b2_ii" class="text-input"></label>
-                        <label for="b2_iii">Ponto III: <input type="text" id = "b2_iii" name="b2_iii" class="text-input"></label>
+                        <label>Ponto I: <input type="text" name="b2_i" class="text-input"></label>
+                        <label>Ponto II: <input type="text" name="b2_ii" class="text-input"></label>
+                        <label>Ponto III: <input type="text" name="b2_iii" class="text-input"></label>
                     </div>
                     <div class="sub-question">
                         <p>Madeira (Mapa C):</p>
-                        <label for="b2_iv">Ponto IV: <input type="text" id = "b2_iv" name="b2_iv" class="text-input"></label>
+                        <label>Ponto IV: <input type="text" name="b2_iv" class="text-input"></label>
                     </div>
                 </div>
 
-                <div class="question">
+                <div class="question"  id="question_b3">
                     <p><strong>3. Sobre a divisão administrativa de Portugal na Figura 2:</strong></p>
                     <label><input type="radio" name="b3" value="A"> (A) Inclui 18 distritos e 2 regiões autónomas</label>
                     <label><input type="radio" name="b3" value="B"> (B) É composta apenas por 3 unidades territoriais</label>
@@ -253,79 +261,77 @@
                 <h2>Grupo C | Formas de Representação</h2>
                 <p><em>Observa as Figuras 5, 6, 7 e 8.</em></p>
                 <img src="figura5.jpg" alt="Formas de Representação" class="figure">
-                <div class="question">
+                <div class="question"  id="question_c1">
                     <p><strong>1. Associa cada forma às suas características:</strong></p>
-                    <label for = "c1_a">a) Mapa: <input type="number" id = "c1_a" name="c1_a" class="small-input" maxlength="1"></label>
-                    <label for = "c1_b">b) Globo terrestre: <input type="number" id = "c1_b" name="c1_b" class="small-input" maxlength="1"></label>
+                    <label>a) Mapa: <input type="number" name="c1_a" class="small-input" maxlength="1"></label>
+                    <label>b) Globo terrestre: <input type="number" name="c1_b" class="small-input" maxlength="1"></label>
                     <p>1. Difícil transporte e arrumação.</p>
                     <p>2. Representação plana com distorções.</p>
                 </div>
-                <img src="figura6.jpg" alt="Imagens A, B, C" class="figure">
-                <div class="question">
+  <img src="figura6.jpg" alt="Imagens A, B, C" class="figure">
+                <div class="question"  id="question_c2">
                     <p><strong>2. Associa cada imagem da Figura 6:</strong></p>
-                    <label for="c2_1">Imagem A: <select id = "c2_1" name="c2_1">
+                    <label>Imagem A: <select name="c2_1">
                         <option value="a">a) Ortofotomapa</option>
                         <option value="b">b) Fotografia aérea</option>
                         <option value="c">c) Imagem de satélite</option>
                     </select></label>
-                    <label for = "c2_2">Imagem B: <select id = "c2_2" name="c2_2">
+                    <label>Imagem B: <select name="c2_2">
                         <option value="a">a) Ortofotomapa</option>
                         <option value="b">b) Fotografia aérea</option>
                         <option value="c">c) Imagem de satélite</option>
                     </select></label>
-                    <label for = "c2_3">Imagem C: <select id = "c2_3" name="c2_3">
+                    <label>Imagem C: <select name="c2_3">
                         <option value="a">a) Ortofotomapa</option>
                         <option value="b">b) Fotografia aérea</option>
                         <option value="c">c) Imagem de satélite</option>
                     </select></label>
                 </div>
 
-                <div class="question">
+                <div class="question"  id="question_c3">
                     <p><strong>3. Sobre projeções cartográficas:</strong></p>
                     <label><input type="radio" name="c3" value="A"> (A) Plana para esférica, sem distorções</label>
                     <label><input type="radio" name="c3" value="B"> (B) Esférica para plana, com distorções</label>
                 </div>
-                <img src="figura7.jpg" alt="Projeção Cartográfica" class="figure">
-                <div class="question">
+ <img src="figura7.jpg" alt="Projeção Cartográfica" class="figure">
+                <div class="question"  id="question_c4">
                     <p><strong>4. Identifica o tipo de projeção da Figura 7:</strong></p>
-                    <label for = "c4"><input type="text" id = "c4" name="c4" class="text-input"></label>
+                    <label><input type="text" name="c4" class="text-input"></label>
                 </div>
 
-                <div class="question">
+                <div class="question" id="question_c5">
                     <p><strong>5. Associa cada descrição ao tipo de mapa:</strong></p>
-                    <label for = "c5_a">a) Toda a superfície terrestre num plano: <select id = "c5_a" name="c5_a">
+                    <label>a) Toda a superfície terrestre num plano: <select name="c5_a">
                         <option value="Estradas">Estradas</option>
                         <option value="Político">Político</option>
                         <option value="Planta">Planta</option>
                         <option value="Planisfério">Planisfério</option>
                     </select></label>
-                    <label for = "c5_b">b) Vias de comunicação para viajantes: <select id = "c5_b" name="c5_b">
+                    <label>b) Vias de comunicação para viajantes: <select name="c5_b">
                         <option value="Estradas">Estradas</option>
                         <option value="Político">Político</option>
                         <option value="Planta">Planta</option>
                         <option value="Planisfério">Planisfério</option>
                     </select></label>
-                    <label for = "c5_c">c) Países ou regiões administrativas: <select id = "c5_c" name="c5_c">
+                    <label>c) Países ou regiões administrativas: <select name="c5_c">
                         <option value="Estradas">Estradas</option>
                         <option value="Político">Político</option>
                         <option value="Planta">Planta</option>
                         <option value="Planisfério">Planisfério</option>
                     </select></label>
-                    <label for = "c5_d">d) Mapa com muitos pormenores (casas, árvores): <select id = "c5_d" name="c5_d">
+                    <label>d) Mapa com muitos pormenores (casas, árvores): <select name="c5_d">
                         <option value="Estradas">Estradas</option>
                         <option value="Político">Político</option>
                         <option value="Planta">Planta</option>
                         <option value="Planisfério">Planisfério</option>
                     </select></label>
                 </div>
-
-
             </div>
 
             <button type="submit">Submeter Respostas</button>
         </form>
 
-        <div id="results">
+        <div id="results" style="display:none;">
             <h2>Resultados</h2>
             <p id="score"></p>
             <div id="corrections"></div>
@@ -337,9 +343,9 @@
             e.preventDefault();
 
             const correctAnswers = {
-                a1_franca: "1",
+                a1_franca: "1",      // Exemplo, ajuste conforme mapa
                 a1_finlandia: "2",
-                a1_hungria: "3",
+                a1_hungria: "3",     // Substituí "Miranda" por "Hungria"
                 a1_alemanha: "4",
                 a1_grecia: "5",
                 a1_italia: "6",
@@ -353,9 +359,8 @@
                 a3_5: "B",
                 a3_6: "B",
                 a3_7: "A",
-                a4_1: "Facilita o comércio", // Example, add more valid answers
-                a4_2: "Diminui os custos de transação", // Example
-
+                a4_1: "Facilita o comércio",
+                a4_2: "Diminui os custos de transação",
                 b1_1: "Lisboa",
                 b1_2: "Porto",
                 b1_3: "Faro",
@@ -376,61 +381,72 @@
                 c5_b: "Estradas",
                 c5_c: "Político",
                 c5_d: "Planta"
-
             };
 
             let score = 0;
-            let correctionsHTML = '';
+            //let correctionsHTML = ''; // Not needed anymore
 
-            for (const name in correctAnswers) {
-                if (!correctAnswers.hasOwnProperty(name)) continue; // Skip inherited properties
+            for (const questionId in correctAnswers) {
 
-                const correctAnswer = correctAnswers[name].toLowerCase(); // Normalize to lowercase
+                 const correctAnswer = correctAnswers[questionId].toLowerCase(); // Convert the correct answer to lowercase
                 let userAnswer = '';
-                const element = document.querySelector(`[name="${name}"]`);
+                const element = document.querySelector(`[name="${questionId}"]`);
+               let questionElement = element.closest('.question');
 
                 if (!element) {
-                    console.warn(`Element with name ${name} not found.`);
+                    console.warn(`Element with name ${questionId} not found.`);
                     continue;
                 }
 
-                if (element.type === 'radio') {
-                    const selectedRadio = document.querySelector(`input[name="${name}"]:checked`);
+                 if (element.type === 'radio') {
+                    const selectedRadio = document.querySelector(`input[name="${questionId}"]:checked`);
                     userAnswer = selectedRadio ? selectedRadio.value.toLowerCase() : '';
                 } else if (element.tagName === 'SELECT') {
                     userAnswer = element.value.toLowerCase();
-                } else {
+                }
+                 else {
                     userAnswer = element.value.trim().toLowerCase();
                 }
-
                 let isCorrect = false;
 
-                 if (Array.isArray(correctAnswers[name])) {
-                    isCorrect = correctAnswers[name].map(ans => ans.toLowerCase()).includes(userAnswer);
+                if (Array.isArray(correctAnswers[questionId])) {
+                    isCorrect = correctAnswers[questionId].map(ans => ans.toLowerCase()).includes(userAnswer);
                 } else {
                     isCorrect = userAnswer === correctAnswer;
                 }
 
+                let feedbackElement = questionElement.querySelector('.feedback'); // Check if feedback element exists
+                if (!feedbackElement) {
+                    feedbackElement = document.createElement('div');
+                    feedbackElement.classList.add('feedback');
+                    questionElement.appendChild(feedbackElement);
+                }
+
                 if (isCorrect) {
                     score++;
-                    element.classList.add('correct');
-                    element.classList.remove('incorrect');
-
+                     feedbackElement.classList.remove('incorrect');
+                    feedbackElement.classList.add('correct');
+                    feedbackElement.textContent = "Correto!";
                 } else {
-                    element.classList.add('incorrect');
-                     element.classList.remove('correct');
-                    correctionsHTML += `<p><strong>${name}:</strong> Correct Answer: ${correctAnswers[name]}, Your Answer: ${userAnswer || 'No answer'}</p>`;
+                     feedbackElement.classList.remove('correct');
+                    feedbackElement.classList.add('incorrect');
+                    feedbackElement.textContent = `Incorreto. A resposta correta é: ${correctAnswers[questionId]}`;
                 }
+
             }
 
             const totalQuestions = Object.keys(correctAnswers).length;
             const percentage = (score / totalQuestions) * 100;
 
+            // Display the score
+
+           // Hide #results to avoid duplicate display
+          const resultsDiv = document.getElementById('results');
+            resultsDiv.style.display = "block";
             document.getElementById('score').textContent = `Your Score: ${score} / ${totalQuestions} (${percentage.toFixed(2)}%)`;
-            document.getElementById('corrections').innerHTML = correctionsHTML;
-            document.getElementById('results').style.display = 'block';
+
+           // document.getElementById('results').style.display = 'block';
         });
     </script>
-
 </body>
 </html>
