@@ -1,122 +1,337 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <title>Clima e Formações Vegetais</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f4f4f9;
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-    }
-    .question {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .correct-answer {
-      color: green;
-      font-weight: bold;
-    }
-    .wrong-answer {
-      color: red;
-    }
-    #result {
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 20px;
-    }
-    button {
-      display: block;
-      margin: 30px auto;
-      padding: 10px 20px;
-      font-size: 16px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Geografia - Mobilidade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .submit-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .correct-answer {
+            color: red;
+            font-style: italic;
+            margin-left: 20px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <h1>Clima e Formações Vegetais</h1>
-  <form id="quizForm">
+    <h1>Quiz de Geografia - Mobilidade (11º Ano)</h1>
+    <div class="quiz-container">
+        <div class="question" id="q1">
+            <p>1. A distância relativa é...</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A) aquela que depende da posição relativa do observador.</label>
+                <label><input type="radio" name="q1" value="B"> B) a que corresponde ao tempo necessário para percorrer uma determinada distância.</label>
+                <label><input type="radio" name="q1" value="C"> C) a que corresponde ao custo necessário para percorrer uma determinada distância.</label>
+                <label><input type="radio" name="q1" value="D"> D) a que é avaliada em termos de tempo, custo ou esforço.</label>
+                <span class="correct-answer" id="correct-q1">Resposta correta: a que corresponde ao tempo necessário para percorrer uma determinada distância.</span>
+            </div>
+        </div>
 
-    <div class="question">
-      <p>1. Qual é a principal característica do clima equatorial?</p>
-      <label><input type="radio" name="q1" value="a"> Temperaturas muito baixas e pouca chuva</label><br>
-      <label><input type="radio" name="q1" value="b"> Elevada amplitude térmica anual</label><br>
-      <label><input type="radio" name="q1" value="c"> Temperaturas elevadas e precipitação abundante e regular</label><br>
-      <span class="answer" data-correct="c"></span>
+        <div class="question" id="q2">
+            <p>2. A opção entre os diferentes modos de transporte depende de diversos fatores, tais como...</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> A) a finalidade do modo de transporte e sua qualidade estética.</label>
+                <label><input type="radio" name="q2" value="B"> B) as características naturais, como o custo e a distância a percorrer.</label>
+                <label><input type="radio" name="q2" value="C"> C) o desenvolvimento tecnológico do país e as suas características naturais.</label>
+                <label><input type="radio" name="q2" value="D"> D) o desenvolvimento tecnológico do país e as suas características naturais.</label>
+                <span class="correct-answer" id="correct-q2">Resposta correta: o desenvolvimento tecnológico do país e as suas características naturais.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q3">
+            <p>3. O transporte rodoviário apresenta inúmeras vantagens, das quais se podem destacar...</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> A) a capacidade de especialização e a eficiência ambiental.</label>
+                <label><input type="radio" name="q3" value="B"> B) a elevada mobilidade e a redução sinistralidade.</label>
+                <label><input type="radio" name="q3" value="C"> C) a possibilidade de efetuar deslocações flexíveis e com elevado conforto.</label>
+                <label><input type="radio" name="q3" value="D"> D) as dificuldades de parqueamento e os impactos ambientais.</label>
+                <span class="correct-answer" id="correct-q3">Resposta correta: a possibilidade de efetuar deslocações flexíveis e com elevado conforto.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q4">
+            <p>4. Especialmente em áreas urbanas, o transporte rodoviário apresenta algumas limitações, tais como...</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> A) o espaço limitado de parqueamento e a baixa sinistralidade.</label>
+                <label><input type="radio" name="q4" value="B"> B) a sinistralidade e a flexibilidade.</label>
+                <label><input type="radio" name="q4" value="C"> C) a redução da poluição sonora e atmosférica.</label>
+                <label><input type="radio" name="q4" value="D"> D) as dificuldades de parqueamento e a sinistralidade.</label>
+                <span class="correct-answer" id="correct-q4">Resposta correta: a redução da poluição sonora e atmosférica.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q5">
+            <p>5. O transporte que maior competitividade vai adquirindo com o aumento da distância a percorrer e com o aumento da carga a transportar é o...</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="aéreo"> aéreo</label>
+                <label><input type="radio" name="q5" value="ferroviário"> ferroviário</label>
+                <label><input type="radio" name="q5" value="rodoviário"> rodoviário</label>
+                <label><input type="radio" name="q5" value="marítimo"> marítimo</label>
+                <span class="correct-answer" id="correct-q5">Resposta correta: marítimo.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q6">
+            <p>6. A intermodalidade do transporte por estrada reduz custos ao...</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> A) reduzir os custos de transporte porta a porta.</label>
+                <label><input type="radio" name="q6" value="B"> B) melhorar a eficiência no transporte porta a porta.</label>
+                <label><input type="radio" name="q6" value="C"> C) reduzir o impacto do transporte sobre o ambiente.</label>
+                <label><input type="radio" name="q6" value="D"> D) diminuir o impacto do transporte sobre o ambiente.</label>
+                <span class="correct-answer" id="correct-q6">Resposta correta: reduzir o impacto do transporte sobre o ambiente.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q7">
+            <p>7. As vantagens da utilização do modo marítimo, relativamente ao modo rodoviário, no transporte de mercadorias são, entre outras...</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> A) a menor exposição aos congestionamentos de tráfego e a maior rapidez do processo de distribuição.</label>
+                <label><input type="radio" name="q7" value="B"> B) a grande flexibilidade nos percursos e o menor custo por unidade de carga transportada.</label>
+                <label><input type="radio" name="q7" value="C"> C) a maior capacidade de carga e o menor impacto ambiental por unidade de carga transportada.</label>
+                <label><input type="radio" name="q7" value="D"> D) o baixo consumo de combustível e a maior capacidade de se adequar ao tipo de carga transportada.</label>
+                <span class="correct-answer" id="correct-q7">Resposta correta: a maior capacidade de carga e o menor impacto ambiental por unidade de carga transportada.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q8">
+            <p>8. A Rede Nacional Fundamental...</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> A) distribui-se de forma homogénea no território nacional.</label>
+                <label><input type="radio" name="q8" value="B"> B) distribui-se de forma homogénea no território nacional.</label>
+                <label><input type="radio" name="q8" value="C"> C) é especialmente densa nas áreas Metropolitanas de Lisboa e Porto.</label>
+                <label><input type="radio" name="q8" value="D"> D) serve fundamentalmente às regiões economicamente mais deprimidas do país.</label>
+                <span class="correct-answer" id="correct-q8">Resposta correta: distribui-se de forma homogénea no território nacional.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q9">
+            <p>9. A densidade da rede ferroviária no interior do país, simultaneamente, causa e consequência da...</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="A"> A) concentração de atividades turísticas e da grande densidade populacional.</label>
+                <label><input type="radio" name="q9" value="B"> B) existência de cidades dinâmicas e geradoras de emprego nas áreas envolventes.</label>
+                <label><input type="radio" name="q9" value="C"> C) grande dinâmica das trocas comerciais e do turismo nas regiões transfronteiriças.</label>
+                <label><input type="radio" name="q9" value="D"> D) fragilidade económica e pequena densidade populacional desta região.</label>
+                <span class="correct-answer" id="correct-q9">Resposta correta: grande dinâmica das trocas comerciais e do turismo nas regiões transfronteiriças.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q10">
+            <p>10. A criação de circulares regionais rodoviárias, tipo IC, nas Áreas Metropolitanas de Lisboa e do Porto, reflete-se, de forma positiva, na qualidade de vida da população, porque...</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="A"> A) consome muito solo que pode vir a ser urbanizado.</label>
+                <label><input type="radio" name="q10" value="B"> B) aumenta a concentração de poluentes nas áreas residenciais.</label>
+                <label><input type="radio" name="q10" value="C"> C) dificulta a localização das grandes superfícies forecedoras de bens e de serviços diversos.</label>
+                <label><input type="radio" name="q10" value="D"> D) contribui para a diminuição da intensidade do tráfego no interior das cidades.</label>
+                <span class="correct-answer" id="correct-q10">Resposta correta: consome muito solo que pode vir a ser urbanizado.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q11">
+            <p>11. A deslocação diária de pessoas nas áreas metropolitanas exige uma gestão concertada por parte de todos os intervenientes.</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="A"> A) a expansão da rede de metropolitano.</label>
+                <label><input type="radio" name="q11" value="B"> B) a promoção da multimodalidade nos transportes.</label>
+                <label><input type="radio" name="q11" value="C"> C) a promoção da multimodalidade nos transportes.</label>
+                <label><input type="radio" name="q11" value="D"> D) a promoção da multimodalidade nos transportes.</label>
+                <span class="correct-answer" id="correct-q11">Resposta correta: a promoção da multimodalidade nos transportes.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q12">
+            <p>12. Nos percursos urbanos/suburbanos, o metropolitano apresenta vantagens relativamente ao modo de transporte rodoviário, tais como...</p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="A"> A) maior rapidez nas deslocações, maior capacidade de transporte de passageiros e diminuição do número de utentes nas áreas centrais.</label>
+                <label><input type="radio" name="q12" value="B"> B) maior consumo de energia por passageiro, diminuição do número de utentes nas áreas centrais e maior facilidade no transporte porta-a-porta.</label>
+                <label><input type="radio" name="q12" value="C"> C) maior rapidez nas deslocações, maior capacidade de transporte de passageiros e possibilidade de adequar o número de carruagens ao fluxo de passageiros.</label>
+                <label><input type="radio" name="q12" value="D"> D) maior consumo de energia por passageiro, maior facilidade no transporte porta-a-porta e possibilidade de adequar o número de carruagens ao fluxo de passageiros.</label>
+                <span class="correct-answer" id="correct-q12">Resposta correta: maior consumo de energia por passageiro, maior facilidade no transporte porta-a-porta e possibilidade de adequar o número de carruagens ao fluxo de passageiros.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q13">
+            <p>13. O porto de Sines apresenta relevância estratégica porque...</p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="A"> A) tem infraestruturas adequadas ao tráfego internacional de passageiros e é um porto de águas profundas.</label>
+                <label><input type="radio" name="q13" value="B"> B) está localizado na confluência das principais rotas marítimas internacionais e é um porto de águas profundas.</label>
+                <label><input type="radio" name="q13" value="C"> C) integra a maior plataforma multimodal e logística da Península Ibérica e é o único petrolífero nacional.</label>
+                <label><input type="radio" name="q13" value="D"> D) está articulado com um sistema rodoferroviário de grande capacidade e é o único terminal petrolífero nacional.</label>
+                <span class="correct-answer" id="correct-q13">Resposta correta: integra a maior plataforma multimodal e logística da Península Ibérica e é o único petrolífero nacional.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q14">
+            <p>14. A densidade da rede ferroviária no interior do país, simultaneamente, causa e consequência da...</p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="A"> A) concentração de atividades turísticas e da grande densidade populacional.</label>
+                <label><input type="radio" name="q14" value="B"> B) existência de cidades dinâmicas e geradoras de emprego nas áreas envolventes.</label>
+                <label><input type="radio" name="q14" value="C"> C) grande dinâmica das trocas comerciais e do turismo nas regiões transfronteiriças.</label>
+                <label><input type="radio" name="q14" value="D"> D) fragilidade económica e pequena densidade populacional desta região.</label>
+                <span class="correct-answer" id="correct-q14">Resposta correta: grande dinâmica das trocas comerciais e do turismo nas regiões transfronteiriças.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q15">
+            <p>15. O porto de Sines tem potencial para se tornar num dos grandes hubs portuários da Europa. O que há a fazer é trabalhar para fazer deste porto «a porta de entrada na Europa»...</p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="A"> A) apresenta três das principais vantagens da aposta no transporte marítimo de mercadorias.</label>
+                <label><input type="radio" name="q15" value="B"> B) apresenta três das principais vantagens da aposta no transporte marítimo de mercadorias.</label>
+                <label><input type="radio" name="q15" value="C"> C) apresenta três das principais vantagens da aposta no transporte marítimo de mercadorias.</label>
+                <label><input type="radio" name="q15" value="D"> D) apresenta três das principais vantagens da aposta no transporte marítimo de mercadorias.</label>
+                <span class="correct-answer" id="correct-q15">Resposta correta: apresenta três das principais vantagens da aposta no transporte marítimo de mercadorias.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q16">
+            <p>16. Nos percursos urbanos/suburbanos, o metropolitano apresenta vantagens relativamente ao modo de transporte rodoviário, tais como...</p>
+            <div class="options">
+                <label><input type="radio" name="q16" value="A"> A) maior rapidez nas deslocações, maior capacidade de transporte de passageiros e diminuição do número de utentes nas áreas centrais.</label>
+                <label><input type="radio" name="q16" value="B"> B) maior consumo de energia por passageiro, diminuição do número de utentes nas áreas centrais e maior facilidade no transporte porta-a-porta.</label>
+                <label><input type="radio" name="q16" value="C"> C) maior rapidez nas deslocações, maior capacidade de transporte de passageiros e possibilidade de adequar o número de carruagens ao fluxo de passageiros.</label>
+                <label><input type="radio" name="q16" value="D"> D) maior consumo de energia por passageiro, maior facilidade no transporte porta-a-porta e possibilidade de adequar o número de carruagens ao fluxo de passageiros.</label>
+                <span class="correct-answer" id="correct-q16">Resposta correta: maior consumo de energia por passageiro, maior facilidade no transporte porta-a-porta e possibilidade de adequar o número de carruagens ao fluxo de passageiros.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q17">
+            <p>17. A política europeia de transportes procura alcançar o equilíbrio entre o crescimento económico e a proteção ambiental, através de medidas como...</p>
+            <div class="options">
+                <label><input type="radio" name="q17" value="A"> A) a otimização do transporte fluvial e o incentivo ao transporte combinado.</label>
+                <label><input type="radio" name="q17" value="B"> B) a revitalização do caminho de ferro e a redução da intermodalidade.</label>
+                <label><input type="radio" name="q17" value="C"> C) a valorização dos transportes públicos e o aumento do modo de transporte aéreo.</label>
+                <label><input type="radio" name="q17" value="D"> D) a valorização dos transportes públicos e o aumento do modo de transporte rodoviário.</label>
+                <span class="correct-answer" id="correct-q17">Resposta correta: a valorização dos transportes públicos e o aumento do modo de transporte aéreo.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q18">
+            <p>18. Várias cidades de países da União Europeia, com o objetivo de reduzir o tráfego rodoviário no seu interior, implementaram medidas como...</p>
+            <div class="options">
+                <label><input type="radio" name="q18" value="A"> A) a criação de multas para quem utilizar o automóvel privado nos bairros periféricos.</label>
+                <label><input type="radio" name="q18" value="B"> B) o incentivo à construção de parques de estacionamento nas áreas centrais.</label>
+                <label><input type="radio" name="q18" value="C"> C) o apoio à utilização de veículos menos poluentes, movidos a energia solar.</label>
+                <label><input type="radio" name="q18" value="D"> D) a oferta de transportes públicos coletivos mais eficientes.</label>
+                <span class="correct-answer" id="correct-q18">Resposta correta: a oferta de transportes públicos coletivos mais eficientes.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q19">
+            <p>19. A rede transeuropeia de transportes visa potenciar o mercado europeu e reforçar a coesão territorial, através...</p>
+            <div class="options">
+                <label><input type="radio" name="q19" value="A"> A) da valorização do transporte de mercadorias por modo rodoviário e do reforço das ligações entre as principais capitais europeias.</label>
+                <label><input type="radio" name="q19" value="B"> B) do aumento da conectividade das redes dos diferentes países e do reforço das ligações entre as cidades fronteiriças.</label>
+                <label><input type="radio" name="q19" value="C"> C) do aumento da conectividade entre países e da interoperacionalidade no interior do espaço europeu.</label>
+                <label><input type="radio" name="q19" value="D"> D) da valorização do transporte de mercadorias através do modo rodoviário e da interligação no interior do espaço europeu.</label>
+                <span class="correct-answer" id="correct-q19">Resposta correta: do aumento da conectividade entre países e da interoperacionalidade no interior do espaço europeu.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q20">
+            <p>20. A aposta nos cruzeiros intercontinentais constitui um fator de desenvolvimento da Região Autónoma dos Açores, na medida em que contribui para...</p>
+            <div class="options">
+                <label><input type="radio" name="q20" value="A"> A) dinamizar a economia regional do arquipélago.</label>
+                <label><input type="radio" name="q20" value="B"> B) fortalecer a oferta hoteleira do arquipélago.</label>
+                <label><input type="radio" name="q20" value="C"> C) potenciar um interface entre a Europa e a Ásia.</label>
+                <label><input type="radio" name="q20" value="D"> D) assegurar uma plataforma logística no Atlântico.</label>
+                <span class="correct-answer" id="correct-q20">Resposta correta: assegurar uma plataforma logística no Atlântico.</span>
+            </div>
+        </div>
+
+        <div class="question" id="q21">
+            <p>21. A afirmação “os portos de Lisboa e Leixões são apostas na atração de navios de cruzeiro” é...</p>
+            <div class="options">
+                <label><input type="radio" name="q21" value="A"> A) verdadeira, porque é uma forma de aumentar as receitas e dinamizar o comércio e os serviços das áreas envolventes.</label>
+                <label><input type="radio" name="q21" value="B"> B) verdadeira, porque é uma forma de compensar a redução que se tem vindo a registar no transporte de mercadorias.</label>
+                <label><input type="radio" name="q21" value="C"> C) falsa, porque as frentes ribeirinhas não dispõem de espaço disponível suficiente para a construção de cais especializados.</label>
+                <label><input type="radio" name="q21" value="D"> D) falsa, porque as infraestruturas necessárias ao acolhimento de passageiros são demasiado dispendiosas.</label>
+                <span class="correct-answer" id="correct-q21">Resposta correta: verdadeira, porque é uma forma de compensar a redução que se tem vindo a registar no transporte de mercadorias.</span>
+            </div>
+        </div>
+
+        <button class="submit-btn" onclick="checkAnswers()">Submeter</button>
     </div>
 
-    <div class="question">
-      <p>2. Que tipo de vegetação é característica do clima tropical?</p>
-      <label><input type="radio" name="q2" value="a"> Floresta densa e sempre verde</label><br>
-      <label><input type="radio" name="q2" value="b"> Savana com árvores dispersas</label><br>
-      <label><input type="radio" name="q2" value="c"> Tundra</label><br>
-      <span class="answer" data-correct="b"></span>
-    </div>
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: "C",
+                q2: "C",
+                q3: "C",
+                q4: "C",
+                q5: "marítimo",
+                q6: "C",
+                q7: "C",
+                q8: "B",
+                q9: "C",
+                q10: "A",
+                q11: "B",
+                q12: "D",
+                q13: "C",
+                q14: "C",
+                q15: "A",
+                q16: "D",
+                q17: "C",
+                q18: "D",
+                q19: "C",
+                q20: "D",
+                q21: "B"
+            };
 
-    <div class="question">
-      <p>3. Qual é o tipo de vegetação associado ao clima mediterrânico?</p>
-      <label><input type="radio" name="q3" value="a"> Floresta de coníferas</label><br>
-      <label><input type="radio" name="q3" value="b"> Maqui e garrigue</label><br>
-      <label><input type="radio" name="q3" value="c"> Floresta equatorial</label><br>
-      <span class="answer" data-correct="b"></span>
-    </div>
-
-    <div class="question">
-      <p>4. O que caracteriza o clima desértico?</p>
-      <label><input type="radio" name="q4" value="a"> Elevada precipitação e temperaturas amenas</label><br>
-      <label><input type="radio" name="q4" value="b"> Chuvas frequentes e vegetação densa</label><br>
-      <label><input type="radio" name="q4" value="c"> Elevadas amplitudes térmicas e quase ausência de precipitação</label><br>
-      <span class="answer" data-correct="c"></span>
-    </div>
-
-    <div class="question">
-      <p>5. Qual é a vegetação predominante nas regiões de clima temperado oceânico?</p>
-      <label><input type="radio" name="q5" value="a"> Floresta caducifólia</label><br>
-      <label><input type="radio" name="q5" value="b"> Tundra</label><br>
-      <label><input type="radio" name="q5" value="c"> Savana</label><br>
-      <span class="answer" data-correct="a"></span>
-    </div>
-
-    <button type="button" onclick="verificarRespostas()">Submeter</button>
-    <div id="result"></div>
-  </form>
-
-  <script>
-    function verificarRespostas() {
-      const respostas = document.querySelectorAll('.question');
-      let corretas = 0;
-
-      respostas.forEach((questao, index) => {
-        const selected = questao.querySelector('input[type="radio"]:checked');
-        const respostaCerta = questao.querySelector('.answer').dataset.correct;
-
-        if (selected) {
-          if (selected.value === respostaCerta) {
-            corretas++;
-            selected.parentElement.classList.add('correct-answer');
-          } else {
-            selected.parentElement.classList.add('wrong-answer');
-            const opcoes = questao.querySelectorAll('input[type="radio"]');
-            opcoes.forEach(opcao => {
-              if (opcao.value === respostaCerta) {
-                opcao.parentElement.classList.add('correct-answer');
-              }
-            });
-          }
+            for (let i = 1; i <= 21; i++) {
+                const question = document.querySelector(`input[name="q${i}"]:checked`);
+                const correctSpan = document.getElementById(`correct-q${i}`);
+                if (question) {
+                    if (question.value !== answers[`q${i}`]) {
+                        correctSpan.style.display = "inline";
+                    } else {
+                        correctSpan.style.display = "none";
+                    }
+                } else {
+                    correctSpan.style.display = "inline";
+                }
+            }
         }
-      });
-
-      const percentagem = Math.round((corretas / respostas.length) * 100);
-      document.getElementById('result').textContent = `Acertaste ${percentagem}% das perguntas.`;
-    }
-  </script>
+    </script>
 </body>
 </html>
