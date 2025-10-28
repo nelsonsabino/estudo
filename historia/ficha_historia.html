@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo: O Antigo Regime</title>
+    
+    <!-- Importação da fonte do Google Fonts para um visual mais moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS para o aspeto visual da página */
+
+        :root {
+            --cor-primaria: #4a69bd;
+            --cor-fundo: #f4f7f9;
+            --cor-texto: #333;
+            --cor-correta: #28a745;
+            --cor-incorreta: #dc3545;
+            --cor-borda-correta: #c3e6cb;
+            --cor-fundo-correta: #d4edda;
+            --cor-borda-incorreta: #f5c6cb;
+            --cor-fundo-incorreta: #f8d7da;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--cor-primaria);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--cor-primaria);
+            margin-bottom: 5px;
+        }
+
+        .quiz-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .question-item {
+            background-color: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .question-item p {
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        .options div {
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        
+        .options label:hover {
+            background-color: #e9ecef;
+            border-color: #ced4da;
+        }
+        
+        .options input[type="radio"] {
+            display: none; /* Esconde o botão de rádio original */
+        }
+
+        /* Estilo para quando uma opção é selecionada */
+        .options input[type="radio"]:checked + label {
+            background-color: var(--cor-primaria);
+            color: white;
+            border-color: var(--cor-primaria);
+        }
+
+        /* Estilos para o feedback após a correção */
+        .options label.correct {
+            background-color: var(--cor-fundo-correta);
+            border-color: var(--cor-borda-correta);
+            color: var(--cor-correta);
+            font-weight: 600;
+        }
+
+        .options label.incorrect {
+            background-color: var(--cor-fundo-incorreta);
+            border-color: var(--cor-borda-incorreta);
+            color: var(--cor-incorreta);
+            font-weight: 600;
+        }
+        
+        .buttons-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            background-color: var(--cor-primaria);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3a539b;
+        }
+
+        #retryBtn {
+            background-color: #6c757d;
+        }
+        
+        #retryBtn:hover {
+            background-color: #5a6268;
+        }
+
+        #results {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #eef2f7;
+            text-align: center;
+            display: none; /* Começa escondido */
+        }
+
+        #results h2 {
+            margin-top: 0;
+        }
+
+        #score {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--cor-primaria);
+        }
+        
+        #feedback {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Quiz Interativo: O Antigo Regime</h1>
+            <p>Responde às questões abaixo e clica em "Verificar Respostas" no final.</p>
+        </header>
+
+        <form id="quizForm">
+            <ol class="quiz-list">
+                
+                <!-- Pergunta 1 -->
+                <li class="question-item">
+                    <p>1. No Antigo Regime, o processo de fortalecimento do poder régio…</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q1a" name="q1" value="a" data-correct="true">
+                            <label for="q1a">a) consolidou-se.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q1b" name="q1" value="b">
+                            <label for="q1b">b) saiu abalado.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 2 -->
+                <li class="question-item">
+                    <p>2. Teoria política que defende a concentração dos poderes (legislativo, executivo e judicial) nas mãos do rei. O poder do monarca é considerado de origem divina. Esta é a definição de…</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q2a" name="q2" value="a" data-correct="true">
+                            <label for="q2a">a) absolutismo.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q2b" name="q2" value="b">
+                            <label for="q2b">b) mercantilismo.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 3 -->
+                <li class="question-item">
+                    <p>3. Seleciona a célebre frase atribuída a Luís XIV, o símbolo expoente máximo do absolutismo.</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q3a" name="q3" value="a">
+                            <label for="q3a">a) O Estado somos todos nós!</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q3b" name="q3" value="b" data-correct="true">
+                            <label for="q3b">b) O Estado sou eu!</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 4 -->
+                <li class="question-item">
+                    <p>4. Luís XIV mandou construir um magnífico palácio, que contribuiu para afirmar o seu poder absoluto. Identifica-o.</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q4a" name="q4" value="a" data-correct="true">
+                            <label for="q4a">a) Palácio de Versalhes.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q4b" name="q4" value="b">
+                            <label for="q4b">b) Palácio de Fontainebleau.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 5 -->
+                <li class="question-item">
+                    <p>5. A sociedade do Antigo Regime era marcada por uma profunda diferenciação social.</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q5a" name="q5" value="a" data-correct="true">
+                            <label for="q5a">a) A afirmação é verdadeira.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q5b" name="q5" value="b">
+                            <label for="q5b">b) A afirmação é falsa.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 6 -->
+                <li class="question-item">
+                    <p>6. Durante o Antigo Regime, a mobilidade social…</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q6a" name="q6" value="a">
+                            <label for="q6a">a) era bastante comum.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q6b" name="q6" value="b" data-correct="true">
+                            <label for="q6b">b) era bastante reduzida.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 7 -->
+                <li class="question-item">
+                    <p>7. No Antigo Regime, a agricultura continuava a ser a principal atividade económica.</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q7a" name="q7" value="a" data-correct="true">
+                            <label for="q7a">a) A afirmação é verdadeira.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q7b" name="q7" value="b">
+                            <label for="q7b">b) A afirmação é falsa.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 8 -->
+                <li class="question-item">
+                    <p>8. Sistema de produção, difundido na Europa nos séculos XVI a XVIII, em que o fabrico era, sobretudo, manual e onde existia divisão do trabalho. Esta é a definição de…</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q8a" name="q8" value="a" data-correct="true">
+                            <label for="q8a">a) manufatura.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q8b" name="q8" value="b">
+                            <label for="q8b">b) maquinofatura.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 9 -->
+                <li class="question-item">
+                    <p>9. Um dos países que implementou o mercantilismo foi a França, devido à ação de…</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q9a" name="q9" value="a">
+                            <label for="q9a">a) Jacques Bossuet.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q9b" name="q9" value="b" data-correct="true">
+                            <label for="q9b">b) Jean-Baptiste Colbert.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 10 -->
+                <li class="question-item">
+                    <p>10. Ao proteger a produção nacional, o mercantilismo … a intervenção do Estado na economia.</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q10a" name="q10" value="a">
+                            <label for="q10a">a) recusava</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q10b" name="q10" value="b" data-correct="true">
+                            <label for="q10b">b) defendia</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 11 -->
+                <li class="question-item">
+                    <p>11. Em Portugal, o rei que representou o modelo de rei absoluto foi…</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q11a" name="q11" value="a">
+                            <label for="q11a">a) D. Pedro II.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q11b" name="q11" value="b" data-correct="true">
+                            <label for="q11b">b) D. João V.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 12 -->
+                <li class="question-item">
+                    <p>12. No século XVII, para combater a crise comercial e financeira, foram introduzidas, em Portugal, medidas mercantilistas pela mão do…</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q12a" name="q12" value="a">
+                            <label for="q12a">a) Conde Andeiro.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q12b" name="q12" value="b" data-correct="true">
+                            <label for="q12b">b) Conde da Ericeira.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 13 -->
+                <li class="question-item">
+                    <p>13. Seleciona os dois acontecimentos que comprometeram o sucesso das medidas mercantilistas implementadas pelo Conde da Ericeira.</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q13a" name="q13" value="a">
+                            <label for="q13a">a) O Tratado de Versalhes e a Revolta do Manuelinho.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q13b" name="q13" value="b" data-correct="true">
+                            <label for="q13b">b) O Tratado de Methuen e a descoberta de ouro e pedras preciosas no Brasil.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 14 -->
+                <li class="question-item">
+                    <p>14. O Marquês de Pombal modernizou o Estado e…</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q14a" name="q14" value="a">
+                            <label for="q14a">a) desvalorizou a burguesia.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q14b" name="q14" value="b" data-correct="true">
+                            <label for="q14b">b) submeteu os grupos privilegiados.</label>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Pergunta 15 -->
+                <li class="question-item">
+                    <p>15. A política económica do Marquês de Pombal … a dependência de Portugal face à França e à Inglaterra.</p>
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="q15a" name="q15" value="a" data-correct="true">
+                            <label for="q15a">a) reduziu</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q15b" name="q15" value="b">
+                            <label for="q15b">b) aumentou</label>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            
+            <div class="buttons-container">
+                <button type="button" id="checkBtn" class="btn">Verificar Respostas</button>
+                <button type="button" id="retryBtn" class="btn" style="display: none;">Tentar de Novo</button>
+            </div>
+        </form>
+
+        <div id="results">
+            <h2>O teu resultado:</h2>
+            <p id="score"></p>
+            <p id="feedback"></p>
+        </div>
+
+    </div>
+
+    <script>
+        // JavaScript para a lógica do quiz
+
+        const checkBtn = document.getElementById('checkBtn');
+        const retryBtn = document.getElementById('retryBtn');
+        const resultsDiv = document.getElementById('results');
+        const quizForm = document.getElementById('quizForm');
+
+        checkBtn.addEventListener('click', () => {
+            let score = 0;
+            const questionItems = document.querySelectorAll('.question-item');
+            const totalQuestions = questionItems.length;
+
+            questionItems.forEach((item, index) => {
+                const questionNumber = index + 1;
+                const selectedOption = item.querySelector(`input[name="q${questionNumber}"]:checked`);
+                const allLabels = item.querySelectorAll('label');
+                
+                // Desativa todos os inputs para não permitir alterações
+                item.querySelectorAll('input[type="radio"]').forEach(input => {
+                    input.disabled = true;
+                });
+                
+                // Encontra a resposta correta
+                const correctInput = item.querySelector('input[data-correct="true"]');
+                const correctLabel = document.querySelector(`label[for="${correctInput.id}"]`);
+
+                if (selectedOption) {
+                    const selectedLabel = document.querySelector(`label[for="${selectedOption.id}"]`);
+                    
+                    if (selectedOption.dataset.correct === 'true') {
+                        score++;
+                        selectedLabel.classList.add('correct');
+                    } else {
+                        selectedLabel.classList.add('incorrect');
+                        correctLabel.classList.add('correct'); // Mostra também a correta
+                    }
+                } else {
+                    // Se nenhuma resposta foi selecionada, apenas mostra a correta
+                    correctLabel.classList.add('correct');
+                }
+            });
+
+            // Calcula a percentagem
+            const percentage = (score / totalQuestions) * 100;
+            
+            // Apresenta os resultados
+            document.getElementById('score').innerText = `Acertaste ${score} em ${totalQuestions} (${percentage.toFixed(0)}%)`;
+            document.getElementById('feedback').innerText = getFeedbackMessage(percentage);
+            
+            resultsDiv.style.display = 'block';
+            checkBtn.style.display = 'none';
+            retryBtn.style.display = 'inline-block';
+            
+            // Rola a página para mostrar os resultados
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        retryBtn.addEventListener('click', () => {
+            // Limpa o formulário
+            quizForm.reset();
+
+            // Remove todas as classes de feedback e reativa os botões
+            document.querySelectorAll('.options label').forEach(label => {
+                label.classList.remove('correct', 'incorrect');
+            });
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.disabled = false;
+            });
+
+            // Esconde os resultados e mostra o botão de verificar
+            resultsDiv.style.display = 'none';
+            checkBtn.style.display = 'inline-block';
+            retryBtn.style.display = 'none';
+            
+            // Rola para o topo da página
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        function getFeedbackMessage(percentage) {
+            if (percentage >= 90) {
+                return "Classificação: Satisfaz muito bem";
+            } else if (percentage >= 80) {
+                return "Classificação: Satisfaz bem";
+            } else if (percentage >= 70) {
+                return "Classificação: Satisfaz";
+            } else if (percentage >= 50) {
+                return "Classificação: Satisfaz pouco";
+            } else {
+                return "Classificação: Não satisfaz";
+            }
+        }
+    </script>
+
+</body>
+</html>
