@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Fichas Interativas</title>
+    
+    <!-- Importação da mesma fonte do quiz para consistência visual -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --cor-primaria: #4a69bd;
+            --cor-fundo: #f4f7f9;
+            --cor-texto: #333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: var(--cor-primaria);
+            font-size: 2.5em;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .quiz-selection {
+            display: grid;
+            /* Cria colunas que se adaptam ao tamanho do ecrã */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .quiz-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .quiz-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .quiz-card h2 {
+            margin-top: 0;
+            color: var(--cor-primaria);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .quiz-card p {
+            flex-grow: 1; /* Faz com que o texto ocupe o espaço disponível */
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 12px 25px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3a539b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Fichas de Estudo Interativas</h1>
+            <p>Escolhe um teste para começar a praticar!</p>
+        </header>
+
+        <main class="quiz-selection">
+
+            <!-- Card para o Teste de História -->
+            <div class="quiz-card">
+                <h2>História</h2>
+                <p>Teste os teus conhecimentos sobre o Antigo Regime, o absolutismo, o mercantilismo e a sociedade do século XVIII.</p>
+                <a href="ficha_historia.html" class="btn">Começar Teste</a>
+            </div>
+
+            <!-- 
+                FUTUROS TESTES SERÃO ADICIONADOS AQUI.
+                Basta copiar e colar o bloco <div class="quiz-card">...</div> 
+                e alterar o título, a descrição e o link (href).
+                
+                Exemplo:
+                <div class="quiz-card">
+                    <h2>Matemática</h2>
+                    <p>Um teste sobre equações do segundo grau e trigonometria.</p>
+                    <a href="ficha_matematica.html" class="btn">Começar Teste</a>
+                </div>
+            -->
+
+        </main>
+    </div>
+
+</body>
+</html>
